@@ -7,6 +7,9 @@ server:
   port: 8092
 
 eureka:
+  instance:
+    hostname: organization-service
+    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: http://localhost:8061/eureka/
