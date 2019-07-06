@@ -1,3 +1,8 @@
+spring:
+  profiles: docker
+  application:
+    name: organization-service
+
 server:
   port: 8092
 
