@@ -3,8 +3,8 @@ spring:
   application:
     name: discovery-service
 server:
-  ports:
-      - "8061:8061"
+  port:8061
+     
 
 
 
