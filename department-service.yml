@@ -13,8 +13,7 @@ eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
-    serviceUrl:
-      defaultZone: http://discovery-service:8061/eureka/
+    
       
 logging:
   pattern: 
