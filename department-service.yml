@@ -15,6 +15,9 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://discovery-service:8061/eureka/
+   server:
+    enable-self-preservation: false
+
     
       
 logging:
