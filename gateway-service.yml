@@ -2,15 +2,26 @@ server:
   port: 8060
 
 eureka:
+  instance:
+    hostname: gateway-service
+    prefer-ip-address: true
   client:
+    register-with-eureka: true
+    fetch-registry: true
     serviceUrl:
-      defaultZone: http://localhost:8061/eureka/
+      defaultZone: http://discovery-service:8061/eureka/
+  server:
+    enable-self-preservation: false
+    
 
 logging:
   pattern: 
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
-              
+    
 spring:
+  profiles: docker
+  application:
+    name: gateway-service
   cloud:
     gateway:
       discovery:
